@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="=stylesheet" href="css/bootstrap.css"></link>
+        <style>
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin: 37px auto 0;
+                width: calc(280px * 4);
+            }
+
+            .card {
+                box-shadow: 0 3px 10px 0 #aaa;
+                cursor: pointer;
+                height: 480px;
+                width: 443px;
+            }
+
+            .card h2 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .card.visited {
+                box-shadow: 0 3px 10px 2px #444;
+            }
+
+            @media (max-width: 1100px) {
+                .cards {
+                    grid-template-columns: 1fr 1fr;
+                    width: calc(280px * 2);
+                }
+                .card {
+                    margin: 0 auto 2rem;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .cards {
+                    display: block;
+                    width: 100vw;
+                }
+                .card {
+                    margin: 0 auto 2rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 align="center">This is My First Advance Java Project</h1>
+        <div class="cards" style="column-gap: 30px; margin-left: 50px;">
+            <div class="card" style="float: left;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0cXw46YgNk5p7LIZYdidNa2Sx7Jt4r23l1g&usqp=CAU" style="margin-left: 60px;" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title" style="margin-left: 10px;">Servlet Interface</h2>
+                    <p style="margin-left: 30px;">
+                        This is implemented by using Servlet Interface.We need to @Override these following methods:
+                    <ul>
+                        <li>init(ServletConfig)</li>
+                        <li>service(ServletRequest, ServletResponse)</li>
+                        <li>destroy()</li>
+                        <li>getServletConfig()</li>
+                        <li>getServletInfo()</li>
+                    </ul>
+                    <a class="btn btn-info link-dark" style="margin-left: 20px;" href="web">Go and Check</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="float: left;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStPYi6KjgcE6iTLhU_YV4PP1hI6mcDLLtesg&usqp=CAU" style="margin-left: 60px; margin-top: 10px;" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title" style="margin-left: 10px;">Generic Servlet Class</h2>
+                    <p style="margin-left: 30px;">
+                        This is implemented by using GenericServlet class.We only need to @Override these following method:</p>
+                            <ul>
+                                <li>service()</li>
+                            </ul>
+                    <p style="margin-left: 30px;">
+                        Other all methods body is already defined in this Generic<br> class becouse it can implementes Servlet Interface internally.<br><br>
+                    <a class="btn btn-info link-dark" style="margin-left: 10px;" href="Gen">Go and Check</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="float: left;">
+                <img src="https://i.postimg.cc/rpzfbWRk/http.png" style="margin-left: 60px;" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title" style="margin-left: 10px;">HttpServlet</h2>
+                    <p style="margin-left: 30px;">
+                        This is implemented by using HttpServlet.This can provide methods for particular protocol.Like:
+                    <ul>
+                        <li>doGet(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doPost(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doPut(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doTrace(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doHead(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doDelete(HttpServletRequest req, HttpServletResponse res)</li>
+                        <li>doOptions(HttpServletRequest req, HttpServletResponse res)</li>
+                    </ul>
+                    <a class="btn btn-info link-dark" style="margin-left: 20px;" href="htp">Go and Check</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
